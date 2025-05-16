@@ -1,0 +1,147 @@
+html, body {
+    /* Pour créer des divisions relatives dans la page */
+    height: 100% ;
+
+    /* Pour ajuster les bordures autour des divisions */
+    padding: 0 ;  
+    margin: 0 ;
+}
+
+body {
+    /* Police Georgia */
+    font-family: 'Georgia', serif;
+    /* Couleur de fond */
+    background-color: #f0f4f8;
+    /* Couleur de texte */
+    color: #333;
+    }
+
+#Menu { 
+    /* Couleur du menu */
+    background-color: rgb(132, 175, 255);
+    height: 20%;
+    width: 100%;
+}
+
+#div2 {
+    height: 80%;
+    width: 100%;
+}
+
+#logo-menu {
+    height: 100%;
+    aspect-ratio: 1 / 1 ;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Create a custom checkbox */
+label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("logo.png");
+    background-size: 100% 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Change color when checked */
+input[type="checkbox"]:checked + label {
+    -webkit-animation: spin 5s linear infinite;
+    -moz-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite
+}
+/* input {
+    background-color: red;
+}
+#Menu {
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+} */
+/* 
+label {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    padding: 5%;
+    background-image: url(logo.png) no-repeat;
+    background-size: 100%;
+
+} */
+
+/* label {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    padding: 5%;
+    background-image: url(logo.png);
+}
+ */
+img {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    padding: 10%;
+} 
+
+/* #btnLogo:checked {
+    -webkit-animation: spin 5s linear infinite;
+    -moz-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite
+} */
+
+
+@-moz-keyframes spin {
+    100% { 
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% { -webkit-animation: rotate(360deg);}
+}
+
+@keyframes spin {
+    100% { 
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg) ;
+    }
+}
+
+/* css menu deroulant demo */
+.menuderoulant {
+    position: relative;
+    display: inline-block;
+} 
+
+.contenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.contenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.contenu:hover .contenu {
+    display: block;
+}
+
+.boutonderoulant {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
