@@ -1,11 +1,20 @@
-html, body {
+                                                            /* Propriétés générales */
 
-    /* Pour créer des divisions relatives dans la page */
-    height: 100%;
-
-    /* Pour ajuster les bordures autour des divisions */
+* {
+    /* Pour enlever les espaces autour et entre les divisions */
     padding: 0;  
     margin: 0;
+
+    /* Position relative */
+    position: relative;
+
+}
+
+html, body {
+
+    /* Pour pouvoir créer des divisions relatives dans la page */
+    height: 100%;
+
 }
 
 body {
@@ -32,13 +41,25 @@ body {
     /* Dimensions relatives du menu (20% de la hauteur de la page) */
     height: 20%;
     width: 100%;
+
+    /* Mode de disposition flexible (pour que la division "titre-menu" remplisse le reste de la division) */
+    display: flex;
+
+    /* Ombre de la division */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
+
+
+
 
 #contenu-page {
 
     /* Dimensions relatives de la zone de contenu (pour que la page soit découpée en menu/contenu) */
     height: 80%;
     width: 100%;
+
+    /* Mise en place d'une barre de défilement si dépassement du contenu */
+    overflow-y: auto;
 }
 
 
@@ -51,6 +72,22 @@ body {
 
     /* Pour que la largeur soit définie en fonction de la hauteur (qui dépend du menu) : */
     aspect-ratio: 1 / 1 ;
+    /* background-color: #af904c; */
+}
+
+#div-ombre {
+    /* Dimensions relatives de la division (qui a la forme du logo) */
+    height: 90%;
+    width: 90%;
+
+    /* Marges du logo par rapport à la division */
+    margin: 5%;
+
+    /* Forme circulaire de la division */
+    border-radius: 50%;
+
+    /* Ombre de la division */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #input-logo {
@@ -64,17 +101,11 @@ body {
         /* Forme et dimensions : */
 
     /* Pour que le label du logo soit visible */
-    display: inline-block;
-
-    /* Pour que les dimensions soient calculées par rapport à la division, et non la page */
-    position: relative;
+    display: block;
 
     /* Dimensions relatives du logo */
-    height: 90%;
-    width: 90%;
-
-    /* Marges du logo par rapport à la division */
-    margin: 5%;
+    height: 100%;
+    width: 100%;
 
     /* Pour que le label du logo ait une forme circulaire */
     border-radius: 50%;
@@ -98,6 +129,7 @@ body {
     cursor: pointer;    
 }
 
+
 /* Définition de l'animation du logo : */
 @keyframes rotation {
     100% { 
@@ -119,9 +151,50 @@ body {
 }
 
 
+            /* Titre et menu déroulant : */
+
+#titre-menu {
+
+    /* Mode de disposition "flow", pour que la taille du titre n'influence pas celle de la division */
+    display: flow;
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    height: 100%;
+    width: 100%;
+}
+
+
+            /* Titre : */
+
+#titre {
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    height: 65%;
+    width: 100%;
+}
+
+img {
+
+    /* Centrer l'image (à l'aide des marges automatiques) : */
+    display: block;
+    margin: auto;
+
+    /* Dimensions de l'image (qui dépendent uniquement de la hauteur) */
+    height: 100%;
+}
 
 
             /* Menu déroulant : */
+
+#menu-deroulant {
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    height: 35%;
+    width: 100%;
+}
+
+
+            /* Menu déroulant (test) : */
 
 .menuderoulant {
     position: relative;
@@ -155,3 +228,64 @@ body {
     border: none;
     cursor: pointer;
 }
+
+
+
+
+                                                        /* Mise en forme du contenu */
+
+
+
+.zone-contenu {
+
+    /* Dimensions (uniquement la largeur est définie) */
+    width: 60%;
+
+    /* Marge intérieure entre le bord et le texte */
+    padding: 2%;
+
+    /* Bords circulaires */
+    border-radius: 20px;
+
+    /* Couleur d'arrière-plan */
+    background-color: white;
+
+    /* Effet d'ombre */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.article-impair {
+
+    /* Marge extérieure sur tous les bords */
+    margin: 2%;
+
+    /* Alignement vers la gauche */
+    float: left;    
+}
+
+.article-pair {
+
+    /* Marge extérieure seulement horizontale (la marge des articles impairs espace déjà les zones de contenu) */
+    margin: 0 2%;
+
+    /* Alignement vers la droite */
+    float: right;
+}
+
+.dernier-article {
+
+    /* Marge de bas de page */
+    margin-bottom: 2%;
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
