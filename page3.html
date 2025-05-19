@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="UTF-8">
         <link rel="icon" href="logo.png">
         <title>Maths2de</title>
+        <link rel="stylesheet" href="style3.css">
     </head>
+
     <body>
-        
+        <!-- Menu : -->
+        <div id="menu-page">
+            
+            <!-- Logo : -->            
+            <div id="div-logo">
+
+                <!-- Division dédiée à l'ombre du logo (pour que l'ombre ne soit pas en rotation avec le logo) -->
+                <div id="div-ombre">
+
+                    <!-- On utilise pour le logo un input de type "checkbox", afin qu'il soit interactif sans utiliser JS -->   
+                    <input type="checkbox" id="input-logo">
+                    <label for="input-logo" id="label-logo"></label>  
+                
+                </div>
+                
+            </div>
+
+            <!-- Titre et menu déroulant : -->
+            <div id="titre-menu">
+
+                <!-- Titre : -->
+                <div id="titre">
+                    <!-- Image du titre -->
+                    <img src="titre.png" alt="">
+                </div>
+
+                <!-- Menu déroulant : -->
+                <div id="menu-deroulant">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Contenu : -->
+        <div id="contenu-page">
+            <div id="div-contenu1" class="div-contenu contenu-impair">
+
+                <div id="contenu1" class="block-contenu article-impair">
+                    <article>
+                        <h1>Un site d'excellence</h1>
+                        <p>La propriété margin peut être définie grâce à une, deux, trois ou quatre valeurs. Chaque valeur est une valeur de type <length> ou de type <percentage> ou est le mot-clé auto. Les valeurs négatives permette de dessiner l'élément plus près de ses voisins que ne l'aurait permis la valeur par défaut. Avec une valeur, celle-ci définira la marge pour les quatre côtés de la boîte. Avec deux valeurs, la première s'appliquera aux côtés haut et bas et la seconde aux côtés gauche et droit</p>
+                    </article>
+                </div>
+
+                <div class="div-image">
+
+                </div> 
+
+            </div>
+
+            <div id="div-contenu2" class="div-contenu contenu-pair dernier-contenu">
+
+                <div id="contenu2" class="block-contenu article-pair">
+                    <article>
+                        <h1>Une mission bienveillante</h1>
+                        <p>Afin de centrer un élément horizontalement, avec un navigateur « moderne » on peut utiliser display: flex; justify-content: center;. Les anciens navigateurs comme IE8-9 ne gèrent pas ces valeurs. Aussi, il faudra utiliser margin: 0 auto pour centrer un élément au sein de son parent.</p>
+                    </article>
+                </div>
+
+                <div class="div-image">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="menuderoulant">
+            <button class="boutonderoulant">Cours et exos.</button>
+            <div id="contenu">
+                <a href="#">Chap.1</a>
+                <a href="#">Chap.2</a>
+            </div>
+        </div>
+
+
     </body>
+
 </html>
