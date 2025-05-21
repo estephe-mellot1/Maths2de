@@ -1,0 +1,346 @@
+                                                            /* Propriétés générales */
+
+* {
+    /* Pour enlever les espaces autour et entre les divisions */
+    padding: 0;  
+    margin: 0;
+
+       /* Position relative */
+    position: relative;
+
+}
+
+html, body {
+
+    /* Pour pouvoir créer des divisions relatives dans la page */
+    height: 100%;
+
+    /* Pour empêcher une deuxième barre de défilement d'apparaître */
+    overflow: hidden;
+
+}
+
+body {
+
+    /* Police Georgia */
+    font-family: 'Georgia', serif;
+
+    /* Couleur de fond */
+    background-color: #f0f4f8;
+
+    /* Couleur de texte */
+    color: #333;
+}
+
+
+                                                            /* Mise en forme du menu */
+
+
+#en-tete { 
+
+    /* Couleur du menu */
+    background-color: rgb(132, 175, 255);
+
+    /* Dimensions relatives du menu (20% de la hauteur de la page) */
+    height: 20%;
+    width: 100%;
+
+    /* Mode de disposition flexible (pour que la division "titre-menu" remplisse le reste de la division) */
+    display: flex;
+
+    /* Ombre de la division */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+#contenu-page {
+
+    /* Dimensions relatives de la zone de contenu (pour que la page soit découpée en menu/contenu) */
+    height: 80%;
+    width: 100%;
+
+    /* Mise en place d'une barre de défilement si dépassement du contenu */
+    overflow-y: auto;
+}
+
+
+            /* Logo : */
+
+#div-logo {
+
+    /* Hauteur de la division dédiée au logo */
+    height: 100%;
+
+    /* Pour que la largeur soit définie en fonction de la hauteur (qui dépend du menu) : */
+    aspect-ratio: 1 / 1 ;
+    /* background-color: #af904c; */
+}
+
+#div-ombre {
+    /* Dimensions relatives de la division (qui a la forme du logo) */
+    height: 90%;
+    width: 90%;
+
+    /* Marges du logo par rapport à la division */
+    margin: 5%;
+
+    /* Forme circulaire de la division */
+    border-radius: 50%;
+
+    /* Ombre de la division */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#input-logo {
+
+    /* Pour cacher l'input de type "checkbox" (seul le label associé à cet input est utile à l'interaction) */
+    display: none;
+}
+
+#label-logo {
+
+        /* Forme et dimensions : */
+
+    /* Pour que le label du logo soit visible */
+    display: block;
+
+    /* Dimensions relatives du logo */
+    height: 100%;
+    width: 100%;
+
+    /* Pour que le label du logo ait une forme circulaire */
+    border-radius: 50%;
+
+
+        /* Image d'arrière-plan : */
+
+    /* Logo en arrière-plan */
+    background-image: url("logo.png");
+
+    /* Dimensions du logo par rapport au label */
+    background-size: 100% 100%;
+
+
+        /* Animation du logo */
+
+    /* Mise en place de la rotation (5s par tour, répété à l'infini) */
+    animation: rotation 5s linear infinite;
+
+    /* Changement de la souris pour mettre en avant l'interactivité du logo */
+    cursor: pointer;    
+}
+
+
+/* Définition de l'animation du logo : */
+@keyframes rotation {
+    100% { 
+        /* Rotation de 360° à l'infini */
+        transform: rotate(360deg) ;
+    }
+}
+
+#input-logo:not(:checked) + #label-logo {
+
+    /* Mettre en pause l'animation losque le "checkbox" n'est pas coché */
+    animation-play-state: paused;
+}
+
+#input-logo:checked + #label-logo {
+
+    /* Actionner l'animation losque le "checkbox" est coché */
+    animation-play-state: running;
+}
+
+
+            /* Titre et menu déroulant : */
+
+#titre-menu {
+
+    /* Mode de disposition "flow", pour que la taille du titre n'influence pas celle de la division */
+    display: flow;
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    height: 100%;
+    width: 100%;
+}
+
+
+            /* Titre : */
+
+#titre {
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    height: 60%;
+    width: 100%;
+}
+
+img {
+
+    /* Centrer l'image (à l'aide des marges automatiques) : */
+    display: block;
+    margin: auto;
+
+    /* Dimensions de l'image (qui dépendent uniquement de la hauteur) */
+    height: 100%;
+}
+
+
+            /* Menu : */
+
+#menu {
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    display: flex;
+    height: 40%;
+    width: 60%;
+
+    /* Marges horizontales (pour que les boutons soient plus proches) */
+    margin: 0 20%;
+
+    /* Alignement des éléments au sein des divisions (ici les divisions de boutons) */
+    justify-content: center; 
+    align-items: center;            
+}
+
+.div-bouton-menu {
+
+    /* Dimensions relatives de la division (en disposition flexible) */
+    display: flex;
+    width: 30%;
+    height: 80%;
+
+    /* Marges horizontales */
+    margin: 0 2.5%; 
+
+    /* Alignement des éléments au sein des divisions (ici les boutons) */
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton-menu {
+
+        /* Propriétés esthétiques : */
+
+    /* Couleur d'arrière-plan et de texte */
+    background-color: #2196F3;
+    color: white;
+
+    /* Taille de texte */
+    font-size: 16px;
+
+    /* Absence de bordure */
+    border: none;
+
+    /* Coins arrondis du bouton */
+    border-radius: 5px;
+
+    /* Effet d'ombre */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+    /* Pointeur de souris pour l'interaction */
+    cursor: pointer;
+
+        /* Propriétés de taille : */
+
+    /* Hauteur relative (par rapport à la division) */
+    height: 100%;
+
+}
+
+.a-bouton {
+
+    /* Taille du bouton */
+    height: 100%;
+}
+
+/* Pour les boutons d'extrémité */
+#bouton-accueil, #bouton-a-propos {    
+    
+    /* Marge interne horizontale (entre le texte et les bords du bouton) */
+    padding: 0 15px;
+}
+
+/* Pour le bouton central */
+#bouton-cours {
+
+    /* Pas de marge pour le bouton central */
+    padding: 0;
+
+    /* Remplit l'ensemble de la division (pour faire la même taille que le contenu déroulant */
+    width: 100%;
+}
+
+.bouton-menu:hover {
+
+    /* Soulignement des boutons survolés pour renforcer l'interactivité */
+    text-decoration : underline;
+}
+
+#contenu-deroulant {
+
+        /* Propriétés esthétiques : */
+
+    /* Couleur d'arrière-plan */
+    background-color: #f9f9f9;
+
+    /* Effet d'ombre */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        /* Propriétés de position et de taille : */
+
+    /* Position absolue (pour ne pas avoir de conflits avec la position du bouton) */
+    position: absolute;
+
+    /* Tailles relatives (par rapport à la division menuderoulant) */
+    width: 100%;
+
+    /* Marge supérieure (pour que le texte ne soit pas confondu avec le bouton) */
+    margin-top: 60%;
+
+        /* Propriétés d'affichage : */
+
+    /* Division masquée tant que le bouton n'est pas survolé */
+    display: none;
+
+    /* Pour que le contenu de défilement apparaisse au dessus des éléments */
+    z-index: 1;
+}
+
+#bouton-cours:hover ~ #contenu-deroulant, #contenu-deroulant:hover {
+
+    /* Affichage du contenu déroulant losque le bouton est survolé */
+    display: block;
+}
+
+#contenu-deroulant a {
+
+        /* Propriétés esthétiques : */
+
+    /* Couleur de texte */
+    color: black;
+
+    /* Pas de soulignement */
+    text-decoration: none;
+
+        /* Propriétés de position et de taille : */
+
+    /* Pour que les liens apparaissent les uns en dessous des autres */
+    display: block;
+
+    /* Marge interne pour espacer les liens */
+    padding: 12px 16px; 
+}
+
+#contenu-deroulant a:hover {
+
+    /* Couleur d'arrière-plan losqu'un lien du contenu déroulant est survolé */
+    background-color: #ddd;
+}
+
+
+
+
+
+

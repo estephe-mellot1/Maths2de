@@ -4,13 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" href="logo.png">
-        <title>Maths2de</title>
+        <title>Chapitre 1 – Maths2de</title>
         <link rel="stylesheet" href="style en-tête.css">
-        <link rel="stylesheet" href="style accueil.css">
-        
-        
-        
-        
+        <link rel="stylesheet" href="style cours.css">
     </head>
 
     <body>
@@ -66,42 +62,55 @@
             </div>
         </div>
 
-        <!-- Contenu : -->
-        <div id="contenu-page">
-
-            <div id="contenu1" class="zone-contenu article-impair">
-                <article>
-                    <h1>Un site d'excellence</h1>
-                    <p>
-                        Maths2<sup>de</sup> est un vaste projet qui témoigne de
-                        notre maîtrise des languages HTML et CSS.
-                        Ce site est le fruit d'un grand investissement,
-                        de journées entières consacrées à la programmation.
-                        Ainsi, ce travail reflète notre passion commune pour le codage, 
-                        et de manière plus générale les Sciences Numériques et Sociales.
-
-                    </p>
-                </article>
+        <!-- Barre cours/exercices -->
+        <div class="barre-haut">
+            <div class="onglets-groupes">
+                <a href="Chapitre 1.html" class="onglet onglet-inactif">Cours</a>
+                <a href="Formule_chap1.html" class="onglet">Formules</a>
             </div>
-
-            <div id="contenu2" class="zone-contenu article-pair dernier-article">
-                <article>
-                    <h1>Une mission bienveillante</h1>
-                    <p>
-                        Ce projet n'a pas seulement pour ambition de montrer notre maîtrise de l'informatique,
-                        mais il soutient une cause encore plus noble : l'entraide. En effet, ce site a été créé 
-                        dans le but de répertorier les cours de mathématiques de l'année de Seconde, et
-                        incitant ainsi les personnes en difficulté à progresser.  
-                    </p>
-                    <p>
-                        Nous tenons également à remercier notre très cher professeur M. Saideh, 
-                        sans qui tout cela n'aurait pas été possible.
-                    </p>
-                </article>
-            </div>
-
         </div>
 
+
+        <!-- Contenu principal -->
+        <h1>Révision rapide du Chapitre 1 - Vecteurs</h1>
+
+        <div class="contenu_card">
+
+            <div class="flashcard">
+                <div class="card-interieur">
+                    <div class="card-devant">
+                        <div class="maths">Relation de Chasles</div>
+                        <button class="boutontourner">Tourner</button>
+                    </div>
+                    <div class="card-derriere">
+                        <!-- AM+MB=AB -->
+                        <span class="vecteur_auto">AM</span>+<span class="vecteur_auto">MB</span>=<span class="vecteur_auto">AB</span>
+                        <button class="boutontourner">Tourner</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="card-interieur">
+                    <div class="card-devant">
+                        <div class="maths">Deux vecteurs sont colinéaires si...</div>
+                        <button class="boutontourner">Tourner</button>
+                    </div>
+                    <div class="card-derriere">
+                        Si et seulement si <span class="vecteur_auto">&nbsp;u</span> = k* <span class="vecteur_auto">&nbsp;v</span>
+                        <button class="boutontourner">Tourner</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <!-- Relier au js pour les flashcards -->
+        <script src="script.js"></script>
     </body>
 
 </html>

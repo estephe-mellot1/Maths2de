@@ -1,0 +1,63 @@
+                                                        /* Mise en forme du contenu */
+
+.zone-contenu {
+
+    /* Dimensions (uniquement la largeur est définie) */
+    width: 60%;
+
+    /* Marge intérieure entre le bord et le texte */
+    padding: 2%;
+
+    /* Bords circulaires */
+    border-radius: 20px;
+
+    /* Couleur d'arrière-plan */
+    background-color: white;
+
+    /* Effet d'ombre */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.article-impair {
+
+    /* Marge extérieure sur tous les bords */
+    margin: 2%;
+
+    /* Alignement vers la gauche */
+    float: left;    
+}
+
+.article-pair {
+
+    /* Marge extérieure seulement horizontale (la marge des articles impairs espace déjà les zones de contenu) */
+    margin: 0 2%;
+
+    /* Alignement vers la droite */
+    float: right;
+}
+
+.dernier-article {
+
+    /* Marge de bas de page */
+    margin-bottom: 2%;
+}
+
+h1 {
+    /* Taille de police des titres */
+    font-size: 30px;
+
+    /* Espacement avec les paragraphes */
+    padding-bottom: 20px;
+}
+
+p {
+    /* Taille de police des paragraphes */
+    font-size: 20px;
+
+    /* Hauteur de ligne */
+    line-height: 1.5;
+
+    /* Texte justifié (pour une impression plus propre) */
+    text-align: justify;
+}
+

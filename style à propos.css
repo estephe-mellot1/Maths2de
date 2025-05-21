@@ -1,0 +1,119 @@
+                                                        /* Mise en forme du contenu */
+
+.div-contenu {
+
+    width: 96%;
+    display: flex;
+    flex-direction: row-reverse;
+
+    margin: 2%;
+    margin-bottom: 0;
+
+}
+
+.contenu-impair {
+
+    flex-direction: row;
+
+}
+
+.contenu-pair {
+
+    flex-direction: row-reverse;
+
+}
+
+.dernier-contenu {
+
+    /* Marge de bas de page */
+    margin-bottom: 2%;
+}
+
+
+.block-contenu {
+
+    /* Dimensions (uniquement la largeur est définie) */
+    width: 60%;
+
+    /* Marge intérieure entre le bord et le texte */
+    padding: 2%;
+
+    /* Bords circulaires */
+    border-radius: 20px;
+
+    /* Couleur d'arrière-plan */
+    background-color: white;
+
+    /* Effet d'ombre */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+p, li {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+li {
+    margin-top : 10px;
+    margin-left: 20px;
+}
+
+.div-image {
+    height: 100%;
+    width: 40%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column; 
+}
+
+.sous-div-img {
+    width: 100%;
+}
+
+.img-contenu {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.src-img {
+    width: 100%;
+    /* background-color: #4CAF50; */
+}
+
+.a-src {
+    display: block;
+    text-align: center;
+    color: grey;
+    text-decoration: none;
+}
+
+#div-info {
+        /* Dimensions (uniquement la largeur est définie) */
+    width: 96%;
+
+    /* Marge intérieure entre le bord et le texte */
+    padding: 2%;
+
+    /* Bords circulaires */
+    border-radius: 20px;
+
+    /* Couleur d'arrière-plan */
+    background-color: white;
+
+    /* Effet d'ombre */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+    margin: 0;
+}
